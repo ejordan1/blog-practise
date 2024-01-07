@@ -1,38 +1,122 @@
 .App {
   text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  .container {
+    display: flex;
+    justify-content: center;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+    .auth {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: lightGreen;
+      height: 100vh;
+    }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    h1 {
+      font-size: 23px;
+      color: black;
+      margin-bottom: 23px;
+    }
 
-.App-link {
-  color: #61dafb;
-}
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
+      background-color: black;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    input {
+      padding: 12px;
+      border: none;
+      border-bottom: 1px solid red;
+    }
+
+    .navbar {
+      .container {
+        padding: 10px 0px;
+        display: flex;
+
+        .links {
+          display: flex;
+          gap: 12px;
+        }
+
+        .write {
+          background-color: aqua;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px dotted;
+
+          &:hover {
+            background-color: teal;
+            background-color: aliceblue;
+            border: 1px dotted;
+          }
+        }
+      }
+    }
+
+    .single {
+      display: flex;
+      gap: 50px;
+
+      .content {
+        flex: 5;
+      }
+
+      .menu {
+        flex: 2;
+      }
+    }
+
+    .home {
+      .posts {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+        .post {
+          display: flex;
+          gap: 100px;
+          background-size: contain;
+
+          &:nth-child(2n+1){
+            flex-direction: row-reverse;
+          }
+
+          .img {
+            flex: 1;
+            position: relative;
+
+            &::after{
+              content:"";
+              width: 100%;
+              height: 100%;
+              background-color: lightpink;
+              position: absolute;
+              top: 20px;
+              left: -15px;
+              z-index: -1;
+            }
+
+            img {
+              max-height: 400px;
+              object-fit: cover;
+            }
+          }
+
+          .content {
+            flex: 2;
+          }
+        }
+      }
+    }
   }
 }
