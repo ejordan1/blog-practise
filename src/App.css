@@ -1,9 +1,15 @@
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 
   .container {
-    display: flex;
-    justify-content: center;
+    width: 1024px;
+
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
 
     .auth {
       display: flex;
@@ -37,6 +43,8 @@
       .container {
         padding: 10px 0px;
         display: flex;
+        align-items: center;
+        gap: 10px;
 
         .links {
           display: flex;
@@ -52,6 +60,7 @@
           align-items: center;
           justify-content: center;
           border: 1px dotted;
+          font-weight: 300;
 
           &:hover {
             background-color: teal;
@@ -62,16 +71,98 @@
       }
     }
 
+    footer {
+      margin-top: 100px;
+      padding: 20px;
+    }
+
     .single {
       display: flex;
       gap: 50px;
 
       .content {
+        
         flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+       
+        img{
+          max-width: 300px;
+          max-height: 400px;
+          object-fit: cover;
+        }
       }
+
+      .edit{
+        img{
+          width: 20px;
+          height: 20px;
+        }
+
+        cursor: pointer;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        img{
+          max-width: 100px;
+          max-height: 100px;
+          border-radius: 50%;
+          object-fit: cover;;
+        }
+
+        span{
+          font-weight: bold;
+        }
+        h1{
+          font-size: 42px;
+
+        }
+
+        p{
+          text-align: justify;
+          line-height: 30px;
+        }
+
+      }
+
+
 
       .menu {
         flex: 2;
+        flex-direction: column;
+        gap: 10px;
+
+
+        img{
+          max-width: 100px;
+          max-height: 100px;
+          object-fit: cover ;
+        }
+
+        h2{
+          color: black;
+        }
+
+        button {
+          width: max-content;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          background-color: white;
+          border: 1px solid green;
+          color: teal;
+
+          &:hover{
+            border: 1px solid white;
+            background-color: green;
+            color: black;
+          }
+         }
       }
     }
 
@@ -114,6 +205,32 @@
 
           .content {
             flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+             h1{
+              font-size: 48px;
+             }
+             p{
+              font-size: 18px;
+             }
+
+             button {
+              width: max-content;
+              border: none;
+              padding: 10px 20px;
+              cursor: pointer;
+              background-color: white;
+              border: 1px solid green;
+              color: teal;
+
+              &:hover{
+                border: 1px solid white;
+                background-color: green;
+                color: black;
+              }
+             }
+
           }
         }
       }
